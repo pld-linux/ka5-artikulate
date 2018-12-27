@@ -1,18 +1,34 @@
-%define		kdeappsver	17.08.2
-%define		qtver		5.3.2
+%define		kdeappsver	18.12.0
+%define		qtver		5.9.0
 %define		kaname		artikulate
 Summary:	Artikulate
 Name:		ka5-%{kaname}
-Version:	17.08.2
+Version:	18.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	6d181f8b7bd9d9b82032b48cc4424dff
+# Source0-md5:	1ea741519984fe3978841f94f608eb33
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
+BuildRequires:	Qt5Gui-devel >= 5.11.1
+BuildRequires:	Qt5Multimedia-devel
+BuildRequires:	Qt5Network-devel >= 5.11.1
+BuildRequires:	Qt5Qml-devel
+BuildRequires:	Qt5Quick-devel
+BuildRequires:	Qt5Sql-devel
+BuildRequires:	Qt5Test-devel
+BuildRequires:	Qt5Widgets-devel
+BuildRequires:	Qt5XmlPatterns-devel
 BuildRequires:	cmake >= 2.8.12
-BuildRequires:	kf5-extra-cmake-modules >= 1.4.0
+BuildRequires:	gettext-devel
+BuildRequires:	kf5-extra-cmake-modules >= 5.53.0
+BuildRequires:	kf5-karchive-devel
+BuildRequires:	kf5-kconfig-devel
+BuildRequires:	kf5-kcrash-devel
+BuildRequires:	kf5-ki18n-devel
+BuildRequires:	kf5-knewstuff-devel
+BuildRequires:	kf5-kxmlgui-devel
 BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
