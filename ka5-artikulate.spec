@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		artikulate
 Summary:	Artikulate
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	26f48d6b3c7947aa5ac4bfdb2871d02c
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	516203272cfead2a11723ff2baf188ae
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
@@ -72,51 +72,20 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/artikulate.knsrc
 %attr(755,root,root) %{_bindir}/artikulate
 %attr(755,root,root) %{_bindir}/artikulate_editor
-%attr(755,root,root) %{_libdir}/libartikulatecore.so
 %attr(755,root,root) %{_libdir}/libartikulatecore.so.0
-%attr(755,root,root) %{_libdir}/libartikulatelearnerprofile.so
 %attr(755,root,root) %{_libdir}/libartikulatelearnerprofile.so.0
-%attr(755,root,root) %{_libdir}/libartikulatesound.so
 %attr(755,root,root) %{_libdir}/libartikulatesound.so.0
 %dir %{_libdir}/qt5/plugins/artikulate
 %dir %{_libdir}/qt5/plugins/artikulate/libsound
 %attr(755,root,root) %{_libdir}/qt5/plugins/artikulate/libsound/qtmultimediabackend.so
 %{_desktopdir}/org.kde.artikulate.desktop
-%{_datadir}/artikulate
 %{_datadir}/config.kcfg/artikulate.kcfg
-%{_iconsdir}/hicolor/16x16/actions/artikulate-course.png
-%{_iconsdir}/hicolor/16x16/actions/artikulate-expression.png
-%{_iconsdir}/hicolor/16x16/actions/artikulate-paragraph.png
-%{_iconsdir}/hicolor/16x16/actions/artikulate-sentence.png
-%{_iconsdir}/hicolor/16x16/actions/artikulate-word.png
-%{_iconsdir}/hicolor/16x16/apps/artikulate.png
-%{_iconsdir}/hicolor/32x32/actions/artikulate-course-editor.png
-%{_iconsdir}/hicolor/32x32/actions/artikulate-course.png
-%{_iconsdir}/hicolor/32x32/actions/artikulate-expression.png
-%{_iconsdir}/hicolor/32x32/actions/artikulate-paragraph.png
-%{_iconsdir}/hicolor/32x32/actions/artikulate-sentence.png
-%{_iconsdir}/hicolor/32x32/actions/artikulate-word.png
-%{_iconsdir}/hicolor/32x32/apps/artikulate.png
-%{_iconsdir}/hicolor/48x48/actions/artikulate-course.png
-%{_iconsdir}/hicolor/48x48/actions/artikulate-expression.png
-%{_iconsdir}/hicolor/48x48/actions/artikulate-paragraph.png
-%{_iconsdir}/hicolor/48x48/actions/artikulate-sentence.png
-%{_iconsdir}/hicolor/48x48/actions/artikulate-word.png
-%{_iconsdir}/hicolor/48x48/apps/artikulate.png
-%{_iconsdir}/hicolor/64x64/actions/artikulate-course-editor.png
-%{_iconsdir}/hicolor/64x64/actions/artikulate-expression.png
-%{_iconsdir}/hicolor/64x64/actions/artikulate-paragraph.png
-%{_iconsdir}/hicolor/64x64/actions/artikulate-sentence.png
-%{_iconsdir}/hicolor/64x64/actions/artikulate-word.png
-%{_iconsdir}/hicolor/64x64/apps/artikulate.png
-%{_iconsdir}/hicolor/scalable/actions/artikulate-course-editor.svgz
-%{_iconsdir}/hicolor/scalable/actions/artikulate-expression.svgz
-%{_iconsdir}/hicolor/scalable/actions/artikulate-paragraph.svgz
-%{_iconsdir}/hicolor/scalable/actions/artikulate-sentence.svgz
-%{_iconsdir}/hicolor/scalable/actions/artikulate-word.svgz
-%{_iconsdir}/hicolor/scalable/actions/language-artikulate.svg
-%{_iconsdir}/hicolor/scalable/apps/artikulate.svg
 %{_datadir}/metainfo/org.kde.artikulate.appdata.xml
+%{_iconsdir}/hicolor/16x16/apps/artikulate.png
+%{_iconsdir}/hicolor/32x32/apps/artikulate.png
+%{_iconsdir}/hicolor/48x48/apps/artikulate.png
+%{_iconsdir}/hicolor/64x64/apps/artikulate.png
+%{_iconsdir}/hicolor/scalable/apps/artikulate.svg
+%{_datadir}/knsrcfiles/artikulate.knsrc
