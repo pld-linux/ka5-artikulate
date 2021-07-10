@@ -45,6 +45,13 @@ the application and language specifications. All course files are
 maintained in a separate repository named "artikulate-data" and hosted
 on the KDE infrastructure.
 
+%description -l pl.UTF-8
+Artikulate jest programem wspomagającym naukę języków, który pomaga
+poprawić umiejętności wymowy dla wielu z nich. To repozytorium
+zawiera program i specyfikacje języków. Wszystkie plików kursów
+są utrzymywane w oddzielnym repozytorum nazwanym "artikulate-data"
+i hostowanym przez infrastrukturę KDE.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
