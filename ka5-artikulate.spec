@@ -1,15 +1,15 @@
-%define		kdeappsver	21.08.0
+%define		kdeappsver	21.08.1
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		artikulate
 Summary:	Artikulate
 Name:		ka5-%{kaname}
-Version:	21.08.0
+Version:	21.08.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3e968bc8b50146debf3d965a6c8221c0
+# Source0-md5:	bd9880b45dc416386c12b62e8ef92adf
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
